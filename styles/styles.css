@@ -1,0 +1,146 @@
+html{
+    background-color: rgb(39, 36, 36);
+}
+
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    background-color: rgb(20, 20, 19);
+    display: flex;
+    height: 50px;
+    margin-bottom: 2em;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+}
+
+nav ul li{
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0 20px;
+}
+
+nav ul li a{
+    position: relative;
+    transition: all 200ms;
+    font-size: 24px;
+    color: rgb(211, 199, 199);
+    margin-top: auto;
+    margin-bottom: auto;
+    text-decoration: none;
+}
+
+nav ul li a::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(185, 182, 182);
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+nav ul li a:hover:before{
+    transform: scaleX(1);
+}
+
+nav h1{
+    padding: 10px 10px;
+    color: rgb(185, 182, 182);
+}
+
+header h1{
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+#h1-adelante{
+    margin-top: 1em;
+}
+
+.contenido{
+    margin-top: 2em;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+.contenido p{
+    color:rgb(49, 49, 49);
+}
+
+.contenido-grupo{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.contenido-bloque{
+    position: relative;
+    display: block;
+    width: 400px;
+    height: 200px;
+}
+
+.contenido-bloque img{
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.contenido-bloque p{
+    position: absolute;
+    bottom: 0px;
+    width: 400px;
+    background-color: rgba(41, 40, 40, 0.233);
+    color: rgb(241, 236, 236);
+}
+
+.contenido form{
+    display: block;
+    width: 300px;
+    height: 250px;
+    margin: auto;
+    border-radius: 8px;
+    background-color: rgb(170, 167, 167);
+}
+
+.contenido form input{
+    display: block;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.formulario{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.formulario-input{
+    width: 100%;
+}
+
+.ok{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
