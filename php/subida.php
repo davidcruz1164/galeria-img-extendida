@@ -28,10 +28,35 @@
         }
 
         rename($nombregenerado, $dir . $renombrado);
-        echo "Imagen subida con éxito.";
-    }
-    else{
-        echo "Todos los slots están ocupados.<br>Contacta a un administrador para que limpie la galería.";
     }
     // chdir("../galeria/");
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <nav>
+        <h1>test</h1>
+        <ul>
+            <li><a href="../galeria.php?pag=1">Galería</a></li>
+            <li><a href="#">Subir</a></li>
+        </ul>
+    </nav>
+    <header>
+        <?php
+            if ($creado){
+                echo "<h1>Imagen subida con éxito</h1>";
+            }
+            else{
+                echo "<h1>Todos los slots están ocupados</h1>";
+            }
+        ?>
+    </header>
+</body>
+</html>
