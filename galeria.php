@@ -30,29 +30,53 @@
             <div class="contenido-grupo">
                 <div class="contenido-bloque">
                     <?php
-                        echo "<a href='https://www.google.com'><img src='galeria/" . 1*$pagina . ".jpg' alt=''></a>";
+                        if ($pagina == 1){
+                            echo "<a href='https://www.google.com'><img src='galeria/" . 1 . ".jpg' alt=''></a>";
+                            echo "<p>Post #" . 1 . "</p>";
+                        }
+                        else if (file_exists("galeria/" . 1 + (4*($pagina-1)) . ".jpg")){
+                            echo "<a href='https://www.google.com'><img src='galeria/" . 1 + (4*($pagina-1)) . ".jpg' alt=''></a>";
+                            echo "<p>Post #" . 1 + (4*($pagina-1)) . "</p>";
+                        }
                     ?>
-                    <p>Post #1</p>
                 </div>
                 <div class="contenido-bloque">
                     <?php
-                        echo "<a href='https://www.google.com'><img src='galeria/" . 2*$pagina . ".jpg' alt=''></a>";
+                        if ($pagina == 1){
+                            echo "<a href='https://www.google.com'><img src='galeria/" . 2 . ".jpg' alt=''></a>";
+                            echo "<p>Post #" . 2 . "</p>";
+                        }
+                        else if (file_exists("galeria/" . 2 + (4*($pagina-1)) . ".jpg")){
+                            echo "<a href='https://www.google.com'><img src='galeria/" . 2 + (4*($pagina-1)) . ".jpg' alt=''></a>";
+                            echo "<p>Post #" . 2 + (4*($pagina-1)) . "</p>";
+                        }
                     ?>
-                    <p>Post #2</p>
                 </div>
             </div>
             <div class="contenido-grupo">
                 <div class="contenido-bloque">
                     <?php
-                        echo "<a href='https://www.google.com'><img src='galeria/" . 3*$pagina . ".jpg' alt=''></a>";
+                        if ($pagina == 1){
+                            echo "<a href='https://www.google.com'><img src='galeria/" . 3 . ".jpg' alt=''></a>";
+                            echo "<p>Post #" . 3 . "</p>";
+                        }
+                        else if (file_exists("galeria/" . 3 + (4*($pagina-3)) . ".jpg")){
+                            echo "<a href='https://www.google.com'><img src='galeria/" . 3 + (4*($pagina-1)) . ".jpg' alt=''></a>";
+                            echo "<p>Post #" . 3 + (4*($pagina-1)) . "</p>";
+                        }
                     ?>
-                    <p>Post #3</p>
                 </div>
                 <div class="contenido-bloque">
                     <?php
-                        echo "<a href='https://www.google.com'><img src='galeria/" . 4*$pagina . ".jpg' alt=''></a>";
+                        if ($pagina == 1){
+                            echo "<a href='https://www.google.com'><img src='galeria/" . 4 . ".jpg' alt=''></a>";
+                            echo "<p>Post #" . 4 . "</p>";
+                        }
+                        else if (file_exists("galeria/" . 4 + (4*($pagina-1)) . ".jpg")){
+                            echo "<a href='https://www.google.com'><img src='galeria/" . 4 + (4*($pagina-1)) . ".jpg' alt=''></a>";
+                            echo "<p>Post #" . 4 + (4*($pagina-1)) . "</p>";
+                        }
                     ?>
-                    <p>Post #4</p>
                 </div>
             </div>
         </div>
