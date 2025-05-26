@@ -144,3 +144,39 @@ header h1{
     justify-content: center;
     align-items: center;
 }
+
+.contenido-botones{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.contenido-botones button{
+    width: 150px;
+    height: 50px;
+    background-color: rgb(20, 20, 19);
+    color: rgb(211, 199, 199);
+    border: none;
+    font-size: 20px;
+    transition: all 200ms;
+    border-radius: 8px;
+}
+
+.contenido-botones button:hover{
+    background-color: rgb(27, 26, 26);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.contenido-botones-izquierda{
+    width: 50%;
+    display: flex;
+    justify-content: left;
+}
+
+.contenido-botones-derecha{
+    width: 50%;
+    display: flex;
+    justify-content: right;
+}
