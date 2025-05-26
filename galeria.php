@@ -1,6 +1,6 @@
 <?php
     $pagina = $_GET['pag'];
-    if ($pagina == null or is_numeric($pagina) == false or $pagina < 1){
+    if ($pagina == null or is_numeric($pagina) == false or $pagina < 1 or file_exists("galeria/" . 1 + (4*($pagina-1)) . ".jpg") == false){
         include("invalido.html");
         exit();
     }
@@ -77,6 +77,23 @@
                             echo "<p>Post #" . 4 + (4*($pagina-1)) . "</p>";
                         }
                     ?>
+                </div>
+            </div>
+            <div class="contenido-botones">
+                <div class="contenido-botones-izquierda">
+                    <?php
+                        if ($pagina > 1){
+                            echo "<button>Anterior Pág.</button>";
+                        }
+                        else{
+                            echo "<button style='display: none;'>Anterior Pág.</button>";
+                        }
+                    ?>
+                </div>
+                <div class="contenido-botones-derecha">
+                    <?php
+                    ?>
+                    <button>Siguiente Pág.</button>
                 </div>
             </div>
         </div>
