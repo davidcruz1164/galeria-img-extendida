@@ -1,34 +1,35 @@
 <?php
     $creado = false;
     $renombrado = "";
-    for ($i=1;$i<=4;$i++){
-        if (file_exists("../galeria/" . strval($i) . ".jpg") == false)
-        {
-           $renombrado = strval($i) . ".jpg";
-           $creado = true;
-           break;
-        }
+    $archivos = scandir("../galeria/");
+    
+    // Por si existe el test.txt o no
+    if (file_exists("../galeria/Test.txt")){
+        $total_archivos = count($archivos) - 2;
     }
-    if ($creado == true){
-        $dir = "../galeria/";
-        $archivo = $_FILES["archivo"];
-        $info = pathinfo($archivo["name"]);
-
-        $nombregenerado = strval(rand(0, 100000000000)) . ".jpg";
-
-        if ($info["extension"] == "png"){
-            $imagen = imagecreatefrompng($archivo["tmp_name"]);
-            $nuevaimg = imagescale($imagen, 400, 200);
-            $nuevaimg = imagejpeg($nuevaimg, $nombregenerado);
-        }
-        else{
-            $imagen = imagecreatefromjpeg($archivo["tmp_name"]);
-            $nuevaimg = imagescale($imagen, 400, 200);
-            $nuevaimg = imagejpeg($nuevaimg, $nombregenerado);
-        }
-
-        rename($nombregenerado, $dir . $renombrado);
+    else{
+        $total_archivos = count($archivos) - 1;
     }
+
+    $renombrado = strval($total_archivos) . ".jpg";
+    $dir = "../galeria/";
+    $archivo = $_FILES["archivo"];
+    $info = pathinfo($archivo["name"]);
+
+    $nombregenerado = strval(rand(0, 100000000000)) . ".jpg";
+
+    if ($info["extension"] == "png"){
+        $imagen = imagecreatefrompng($archivo["tmp_name"]);
+        $nuevaimg = imagescale($imagen, 400, 200);
+        $nuevaimg = imagejpeg($nuevaimg, $nombregenerado);
+    }
+    else{
+        $imagen = imagecreatefromjpeg($archivo["tmp_name"]);
+        $nuevaimg = imagescale($imagen, 400, 200);
+        $nuevaimg = imagejpeg($nuevaimg, $nombregenerado);
+    }
+
+    rename($nombregenerado, $dir . $renombrado);
     // chdir("../galeria/");
 ?>
 
@@ -45,17 +46,12 @@
         <h1>test</h1>
         <ul>
             <li><a href="../galeria.php?pag=1">Galería</a></li>
-            <li><a href="#">Subir</a></li>
+            <li><a href="../subir.html">Subir</a></li>
         </ul>
     </nav>
     <header>
         <?php
-            if ($creado){
-                echo "<h1>Imagen subida con éxito</h1>";
-            }
-            else{
-                echo "<h1>Todos los slots están ocupados</h1>";
-            }
+            echo "<h1>Imagen subida con éxito</h1>";
         ?>
     </header>
 </body>
