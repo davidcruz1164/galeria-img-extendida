@@ -83,7 +83,7 @@
                 <div class="contenido-botones-izquierda">
                     <?php
                         if ($pagina > 1){
-                            echo "<button>Anterior Pág.</button>";
+                            echo "<a class='boton' href='galeria.php?pag=" . $pagina-1 . "'>Anterior Pág.</a>";
                         }
                         else{
                             echo "<button style='display: none;'>Anterior Pág.</button>";
@@ -92,8 +92,10 @@
                 </div>
                 <div class="contenido-botones-derecha">
                     <?php
+                        if (file_exists("galeria/" . 1 + (4*($pagina+1)) . ".jpg")){
+                            echo "<a class='boton' href='galeria.php?pag=" . $pagina+1 . "'>Siguiente Pág.</a>";      
+                        }
                     ?>
-                    <button>Siguiente Pág.</button>
                 </div>
             </div>
         </div>
