@@ -5,14 +5,16 @@
     
     // Por si existe el test.txt o no
     if (file_exists("../galeria/Test.txt")){
-        $total_archivos = count($archivos) - 2;
+        $total_archivos = count($archivos) - 3;
     }
     else{
-        $total_archivos = count($archivos) - 1;
+        $total_archivos = count($archivos) - 2;
     }
 
     $renombrado = strval($total_archivos) . ".jpg";
     $dir = "../galeria/";
+    $fullsize = "../galeria/fullsize/";
+
     $archivo = $_FILES["archivo"];
     $info = pathinfo($archivo["name"]);
 
@@ -20,15 +22,18 @@
 
     if ($info["extension"] == "png"){
         $imagen = imagecreatefrompng($archivo["tmp_name"]);
-        $nuevaimg = imagescale($imagen, 400, 200);
+        $nuevaimg = imagescale($imagen, 400, 300);
         $nuevaimg = imagejpeg($nuevaimg, $nombregenerado);
+        $fullsizeimg = imagejpeg($imagen, $renombrado);
     }
     else{
         $imagen = imagecreatefromjpeg($archivo["tmp_name"]);
-        $nuevaimg = imagescale($imagen, 400, 200);
+        $nuevaimg = imagescale($imagen, 400, 300);
         $nuevaimg = imagejpeg($nuevaimg, $nombregenerado);
+        $fullsizeimg = imagejpeg($imagen, $renombrado);
     }
 
+    rename($renombrado, $fullsize . $renombrado);
     rename($nombregenerado, $dir . $renombrado);
     // chdir("../galeria/");
 ?>
