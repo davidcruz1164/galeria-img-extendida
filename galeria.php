@@ -1,7 +1,13 @@
 <?php
     $pagina = $_GET['pag'];
-    if ($pagina == null or is_numeric($pagina) == false or $pagina < 1 or file_exists("galeria/" . 1 + (4*($pagina-1)) . ".jpg") == false){
-        include("invalido.html");
+    if ($pagina != 1){
+        if ($pagina == null or is_numeric($pagina) == false or $pagina < 1 or file_exists("galeria/" . 1 + (4*($pagina-1)) . ".jpg") == false){
+            include("invalido.html");
+            exit();
+        }
+    }
+    else if (file_exists("galeria/" . 1 + (4*($pagina-1)) . ".jpg") == false){
+        include("nocontent.html");
         exit();
     }
 ?>
@@ -92,7 +98,7 @@
                 </div>
                 <div class="contenido-botones-derecha">
                     <?php
-                        if (file_exists("galeria/" . 1 + (4*($pagina+1)) . ".jpg")){
+                        if (file_exists("galeria/" . 1 + (4*($pagina)) . ".jpg")){
                             echo "<a class='boton' href='galeria.php?pag=" . $pagina+1 . "'>Siguiente Pág.</a>";      
                         }
                     ?>
