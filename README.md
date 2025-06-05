@@ -1,0 +1,26 @@
+# Galería de Imágenes Extendida
+
+## Descripción
+Este repositorio es una versión extendida del siguiente proyecto: [Galería de Imágenes](https://github.com/hddtomas/galeria-img)
+
+Esta versión presenta la posibilidad de subir más de cuatro imágenes y aparte se puede ver la imagen de forma completa.
+
+## Contenidos
+- Sección de imágenes
+- Subida de imágenes jpg, jpeg y png
+- Conversión de png a jpg
+- Ajuste de resolución de imágenes a 400x300 para miniaturas
+- Sección de limpieza de imágenes solo para administradores
+
+## Por hacer
+- Cuentas de usuario mediante una base de datos
+- Limpieza a todas las imágenes (Por el momento solo borra las primeras cuatro)
+- Sistema de rating
+- Imágenes con más información (Título, descripción, autor y comentarios)
+
+## Lenguajes de programación usados
+- HTML5
+- CSS3
+- PHP
+
+
