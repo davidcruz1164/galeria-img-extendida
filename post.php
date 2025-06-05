@@ -26,6 +26,7 @@
         <div class="contenido-post">
             <?php
                 echo "<img src='galeria/fullsize/" . $id . ".jpg'>";
+                echo "<h1>Post #" . $id . "</h1>";
             ?>
         </div>
     </header>
