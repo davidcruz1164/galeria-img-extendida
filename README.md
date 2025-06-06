@@ -14,7 +14,6 @@ Esta versión presenta la posibilidad de subir más de cuatro imágenes y aparte
 
 ## Por hacer
 - Cuentas de usuario mediante una base de datos
-- Limpieza a todas las imágenes (Por el momento solo borra las primeras cuatro)
 - Sistema de rating
 - Imágenes con más información (Título, descripción, autor y comentarios)
 
