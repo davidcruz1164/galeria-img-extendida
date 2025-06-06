@@ -37,6 +37,9 @@
                 unlink("../galeria/fullsize/" . strval($i) . ".jpg");
                 echo strval($i) . ".jpg fue borrado con éxito.<br>";
             }
+            else{
+                echo strval($i) . ".jpg no existe!";
+            }
         }
         echo "<br><br>El proceso terminó.";
     }
