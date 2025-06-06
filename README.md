@@ -11,6 +11,7 @@ Esta versión presenta la posibilidad de subir más de cuatro imágenes y aparte
 - Conversión de png a jpg
 - Ajuste de resolución de imágenes a 400x300 para miniaturas
 - Sección de limpieza de imágenes solo para administradores
+- Chequeos de sanidad al subir las imágenes
 
 ## Por hacer
 - Cuentas de usuario mediante una base de datos
