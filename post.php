@@ -26,7 +26,12 @@
         <div class="contenido-post">
             <?php
                 echo "<img src='galeria/fullsize/" . $id . ".jpg'>";
-                echo "<h1>Post #" . $id . "</h1>";
+                echo "<div class='post-contenido'>";
+                echo "<div class='post-contenido-titulo'>";
+                echo "<h1 id='post-titulo'>Título</h1>";
+                echo "<h2 id='post-id'>Post ID #" . $id . "</h2>";
+                echo "</div>";
+                echo "</div>";
             ?>
         </div>
     </header>
