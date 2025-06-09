@@ -17,6 +17,7 @@ Esta versión presenta la posibilidad de subir más de cuatro imágenes y aparte
 - Cuentas de usuario mediante una base de datos
 - Sistema de rating
 - Imágenes con más información (Título, descripción, autor y comentarios)
+- Más chequeos de sanidad (Min - max res & min - max size)
 
 ## Lenguajes de programación usados
 - HTML5
