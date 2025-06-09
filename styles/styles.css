@@ -255,3 +255,27 @@ header h1{
     margin-left: auto;
     margin-right: auto;
 }
+
+.post-contenido{
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-contenido-titulo{
+    display: block;
+    justify-content: left;
+}
+
+#post-titulo{
+    display: flex;
+    width: 100%;
+    margin-top: 0.5em;
+}
+
+#post-id{
+    color: rgb(136, 131, 131);
+    margin-left: 0.3em;
+    font-size: 14px;
+}
