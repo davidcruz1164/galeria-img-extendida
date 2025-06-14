@@ -326,6 +326,16 @@ header h1{
     display: block;
 }
 
+.contenido-subir-preview img{
+    display: block;
+    max-width: 500px;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    margin-bottom: 2em;
+}
+
 .contenido-subir-divisores{
     display: block;
     width: 50%;
