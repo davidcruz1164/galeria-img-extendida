@@ -16,11 +16,21 @@
     </nav>
     <header>
         <h1>Subir</h1>
-        <div class="contenido">
-            <form action="php/subida.php" method="POST" enctype="multipart/form-data">
-                <input type="file" accept=".png, .jpg, .jpeg" name="archivo" required>
-                <input type="submit" value="Subir">
-             </form>
+        <div class="contenido-subir">
+            <div class="contenido-subir-divisores">
+                <div class="contenido-subir-preview">
+                    <h1>Vista previa</h1>
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="contenido-subir-divisores">
+                <div class="contenido-subir-formulario">
+                    <form action="php/subida.php" method="POST" enctype="multipart/form-data">
+                        <input type="file" accept=".png, .jpg, .jpeg" name="archivo" required>
+                        <input type="submit" value="Subir">
+                    </form>
+                </div>
+            </div>
         </div>
         <h1 id="h1-adelante">Limpiar</h1>
         <div class="contenido">
