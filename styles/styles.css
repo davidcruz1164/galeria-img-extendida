@@ -312,3 +312,21 @@ header h1{
     border: 2px solid #464949;
     box-shadow: 5px 1px 40px rgb(56, 55, 55);
 }
+
+.contenido-subir{
+    display: flex;
+    width: 65%;
+    background-color: rgb(24, 23, 23);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 6px;
+}
+
+.contenido-subir-preview{
+    display: block;
+}
+
+.contenido-subir-divisores{
+    display: block;
+    width: 50%;
+}
