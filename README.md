@@ -16,8 +16,10 @@ Esta versión presenta la posibilidad de subir más de cuatro imágenes y aparte
 ## Por hacer
 - Cuentas de usuario mediante una base de datos
 - Sistema de rating
-- Imágenes con más información (Título, descripción, autor y comentarios)
-- Más chequeos de sanidad (Min - max res & min - max size)
+- Imágenes con más información (Título, descripción, autor, comentarios y tags)
+- Más chequeos de sanidad (Min res & min size)
+- Soporte para GIFs
+- Sistema de orden de imágenes (?)
 
 ## Lenguajes de programación usados
 - HTML5
