@@ -1,12 +1,13 @@
 <?php
     // TODO TOTAL:
     // - más chequeos de sanidad (tamaño mínimo)
-    // - mostrar mensajes de error más claros
     // - soporte para gifs
 
     $creado = false;
     $renombrado = "";
     $archivos = scandir("../galeria/");
+
+    $mensaje = ""; // mensaje para el final
     
     // Por si existe el test.txt o no
     if (file_exists("../galeria/Test.txt")){
@@ -29,7 +30,7 @@
     list($x, $y) = getimagesize($archivo["tmp_name"]);
     $tamaño = filesize($archivo["tmp_name"]);
 
-    if ($x > 400 || $y > 300 || $tamaño < 5228792){
+    if ($x > 300 and $y > 300 and $tamaño < 5228792){
         if ($info["extension"] == "png"){
             $imagen = imagecreatefrompng($archivo["tmp_name"]);
         }
@@ -37,20 +38,25 @@
             $imagen = imagecreatefromjpeg($archivo["tmp_name"]);
         }
         if (!$imagen){
-            echo "La imagen está corrupta.";
-            exit;
+            $mensaje = "La imagen está corrupta o no es válida";
         }
-        $nuevaimg = imagescale($imagen, 400, 300);
-        $nuevaimg = imagejpeg($nuevaimg, $nombregenerado);
-        $fullsizeimg = imagejpeg($imagen, $renombrado);
+        else{
+            $mensaje = "Imagen subida con éxito";
+            $nuevaimg = imagescale($imagen, 400, 300);
+            $nuevaimg = imagejpeg($nuevaimg, $nombregenerado);
+            $fullsizeimg = imagejpeg($imagen, $renombrado);
 
-        rename($renombrado, $fullsize . $renombrado);
-        rename($nombregenerado, $dir . $renombrado);
+            rename($renombrado, $fullsize . $renombrado);
+            rename($nombregenerado, $dir . $renombrado);
+        }
     }
     else{
-        // caso de error
-        // TODO: mostrar mensaje de error
-        echo "ERROR";
+        if ($x < 300 or $y < 300){
+            $mensaje = "La imagen debe tener una resolución mínima de 300x300 píxeles";
+        }
+        else if ($tamaño > 5228792){
+            $mensaje = "El tamaño de la imagen debe ser menor a 5.2 MBs";
+        }
     }
     // chdir("../galeria/");
 ?>
@@ -73,7 +79,7 @@
     </nav>
     <header>
         <?php
-            echo "<h1>Imagen subida con éxito</h1>";
+            echo "<h1>" . $mensaje . "</h1>";
         ?>
     </header>
 </body>
