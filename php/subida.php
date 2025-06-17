@@ -1,7 +1,10 @@
 <?php
     // TODO TOTAL:
     // - más chequeos de sanidad (tamaño mínimo)
+    // - mostrar mensajes de error más claros
     // - soporte para gifs
+
+    error_reporting(E_ERROR | E_PARSE);
 
     $creado = false;
     $renombrado = "";
