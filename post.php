@@ -4,6 +4,8 @@
         include("invalido.html");
         exit();
     }
+
+    //todo: tags
 ?>
 
 <!DOCTYPE html>
@@ -29,6 +31,10 @@
                 echo "<div class='post-contenido'>";
                 echo "<div class='post-contenido-titulo'>";
                 echo "<h1 id='post-titulo'>Título</h1>";
+                echo "<div class='post-contenido-tags'>";
+                echo "<span id='post-tag'>tag1</span>";
+                echo "<span id='post-tag'>tag2</span>";
+                echo "</div>";
                 echo "<h2 id='post-id'>Post ID #" . $id . "</h2>";
                 echo "<p id='post-descripcion'>Descripción. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aspernatur alias harum velit laborum perspiciatis quisquam autem voluptatum ducimus deleniti. Placeat fugiat veniam provident, blanditiis quos voluptatum aliquam cupiditate ullam.</p>";
                 echo "</div>";
