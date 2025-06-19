@@ -269,10 +269,23 @@ header h1{
     justify-content: left;
 }
 
+.post-contenido-tags{
+    display: flex;
+    margin-left: 0.3em;
+    gap: 1em;
+}
+
 #post-titulo{
     display: flex;
     width: 100%;
     margin-top: 0.5em;
+}
+
+#post-tag{
+    background-color: red;
+    width: 60px;
+    display: flex;
+    justify-content: center;
 }
 
 #post-id{
