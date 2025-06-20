@@ -105,7 +105,7 @@
                             echo "<a class='boton' href='galeria.php?pag=" . $pagina-1 . "'>Anterior Pág.</a>";
                         }
                         else{
-                            echo "<button style='display: none;'>Anterior Pág.</button>";
+                            echo "<button class='boton' disabled>Anterior Pág.</button>";
                         }
                     ?>
                 </div>
@@ -113,6 +113,9 @@
                     <?php
                         if (file_exists("galeria/" . 1 + (4*($pagina)) . ".jpg")){
                             echo "<a class='boton' href='galeria.php?pag=" . $pagina+1 . "'>Siguiente Pág.</a>";      
+                        }
+                        else{
+                            echo "<button class='boton' disabled>Siguiente Pág.</button>";
                         }
                     ?>
                 </div>
