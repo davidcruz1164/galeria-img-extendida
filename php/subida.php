@@ -33,7 +33,7 @@
     list($x, $y) = getimagesize($archivo["tmp_name"]);
     $tamaño = filesize($archivo["tmp_name"]);
 
-    if ($x > 300 and $y > 300 and $tamaño < 5228792){
+    if ($x >= 300 and $y >= 300 and $tamaño < 5228792){
         if ($info["extension"] == "png"){
             $imagen = imagecreatefrompng($archivo["tmp_name"]);
         }
