@@ -374,9 +374,11 @@ header h1{
     color: rgb(255, 255, 255);
 }
 
+/* Alinear de forma igualitaria */
+
 .requisito1, .requisito2, .requisito3{
     display: block;
-    background-color: rgb(20, 133, 67);
+    background-color: rgb(170, 175, 172);
     width: 20px;
     height: 20px;
     margin-right: 0.5em;
