@@ -374,7 +374,8 @@ header h1{
     color: rgb(255, 255, 255);
 }
 
-/* Alinear de forma igualitaria */
+/* Alinear los requisitos de forma igualitaria
+Queda muy raro que no estén juntos, pero bueno */
 
 .requisito1, .requisito2, .requisito3{
     display: block;
@@ -401,6 +402,63 @@ header h1{
 }
 
 .contenido-subir-formulario{
-    margin-left: 10px;
-    margin-top: 7px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.contenido-subir-formulario form{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.contenido-subir-formulario form input{
+    display: block;
+}
+
+.contenido-subir-formulario form input[type=file]{
+    margin-top: 4em;
+}
+
+.contenido-subir-formulario form input[type=submit]{
+    display: block;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(20, 20, 19);
+    color: rgb(211, 199, 199);
+    border: none;
+    font-size: 20px;
+    transition: all 200ms;
+    border-radius: 8px;
+    margin-top: 12em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenido-subir-formulario form input[type=submit]:hover{
+    background-color: rgb(27, 26, 26);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.contenido-subir-formulario form input[type=submit]:disabled{
+    opacity: .3;
+    cursor: not-allowed;
+}
+
+.contenido-subir-formulario-fila1{
+    display: flex;
+    margin-top: 1em;
+    gap: 5em;
+}
+
+.contenido-subir-formulario-fila1-input{
+    display: block;
+}
+
+.contenido-subir-formulario-fila1-input p{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
 }
