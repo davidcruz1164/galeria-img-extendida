@@ -20,6 +20,7 @@ Esta versión presenta la posibilidad de subir más de cuatro imágenes y aparte
 - Más chequeos de sanidad (Min res & min size)
 - Soporte para GIFs
 - Sistema de orden de imágenes (?)
+- Página responsive
 
 ## Lenguajes de programación usados
 - HTML5
