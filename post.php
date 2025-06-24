@@ -31,6 +31,7 @@
         <div class="contenido-post">
             <?php
                 echo "<img src='galeria/fullsize/" . $id . ".jpg'>";
+                // todo: like y dislike
                 echo "<div class='post-contenido'>";
                 echo "<div class='post-contenido-titulo'>";
                 echo "<h1 id='post-titulo'>Título</h1>";
