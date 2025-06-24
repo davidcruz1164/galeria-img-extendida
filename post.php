@@ -23,6 +23,9 @@
             <li><a href="galeria.php?pag=1">Galería</a></li>
             <li><a href="subir.html">Subir</a></li>
         </ul>
+        <div class="nav-cuenta">
+            <a href="cuenta.php" id="cuenta">Invitado</a>
+        </div>
     </nav>
     <header>
         <div class="contenido-post">
