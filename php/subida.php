@@ -6,7 +6,6 @@
 
     error_reporting(E_ERROR | E_PARSE);
 
-    $creado = false;
     $renombrado = "";
     $archivos = scandir("../galeria/");
 
@@ -44,13 +43,40 @@
             $mensaje = "La imagen está corrupta o no es válida";
         }
         else{
+            $miniatura_w = 400;
+            $miniatura_h = 300;
+
+            $width = imagesx($imagen);
+            $height = imagesy($imagen);
+
+            $aspecto_original = $width / $height;
+            $aspecto_miniatura = $miniatura_w / $miniatura_h;
+
+            if ( $aspecto_original >= $aspecto_miniatura )
+            {
+                $nueva_height = $miniatura_h;
+                $nueva_width = $width / ($height / $miniatura_h);
+            }
+            else
+            {
+                $nueva_width = $miniatura_w;
+                $nueva_height = $height / ($width / $miniatura_w);
+            }
+
+            $miniatura = imagecreatetruecolor( $miniatura_w, $miniatura_h );
+
+            imagecopyresampled($miniatura,
+                            $imagen,
+                            0 - ($nueva_width - $miniatura_w) / 2, 
+                            0 - ($nueva_height - $miniatura_h) / 2, 
+                            0, 0,
+                            $nueva_width, $nueva_height,
+                            $width, $height);
+            imagejpeg($miniatura, $dir . $renombrado , 80);
             $mensaje = "Imagen subida con éxito";
-            $nuevaimg = imagescale($imagen, 400, 300);
-            $nuevaimg = imagejpeg($nuevaimg, $nombregenerado);
             $fullsizeimg = imagejpeg($imagen, $renombrado);
 
             rename($renombrado, $fullsize . $renombrado);
-            rename($nombregenerado, $dir . $renombrado);
         }
     }
     else{
