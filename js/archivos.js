@@ -15,7 +15,7 @@ archivo.addEventListener("change", (event) => {
     image.onload = () => {
         width = image.naturalWidth;
         height = image.naturalHeight;
-        if (width >= 300 && height >= 300){
+        if (width >= 400 && height >= 300){
             requisito1.style.backgroundColor = "rgb(20, 133, 67)";
             req1 = true;
         }
