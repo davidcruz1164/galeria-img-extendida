@@ -32,7 +32,7 @@
     list($x, $y) = getimagesize($archivo["tmp_name"]);
     $tamaño = filesize($archivo["tmp_name"]);
 
-    if ($x >= 300 and $y >= 300 and $tamaño < 5228792){
+    if ($x >= 400 and $y >= 300 and $tamaño < 5228792){
         if ($info["extension"] == "png"){
             $imagen = imagecreatefrompng($archivo["tmp_name"]);
         }
@@ -80,7 +80,7 @@
         }
     }
     else{
-        if ($x < 300 or $y < 300){
+        if ($x < 400 or $y < 300){
             $mensaje = "La imagen debe tener una resolución mínima de 300x300 píxeles";
         }
         else if ($tamaño > 5228792){
