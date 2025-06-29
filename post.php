@@ -1,7 +1,7 @@
 <?php
     $id = $_GET["id"];
     if (!file_exists("galeria/fullsize/" . $id . ".jpg")){
-        include("invalido.html");
+        header("Location: error.php?id=2");
         exit();
     }
 
