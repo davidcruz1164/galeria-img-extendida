@@ -485,3 +485,15 @@ Queda muy raro que no estén juntos, pero bueno */
     font-weight: bold;
     font-size: 18px;
 }
+
+#error, #disculpas{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 2em;
+}
+
+#disculpas{
+    margin-top: 1em;
+}
