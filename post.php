@@ -24,7 +24,7 @@
             <li><a href="subir.html">Subir</a></li>
         </ul>
         <div class="nav-cuenta">
-            <a href="cuenta.php" id="cuenta">Invitado</a>
+            <a href="php/cuenta.php" id="cuenta">Invitado</a>
         </div>
     </nav>
     <header>
