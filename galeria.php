@@ -3,12 +3,12 @@
     $pagina = $_GET['pag'];
     if ($pagina != 1){
         if ($pagina == null or is_numeric($pagina) == false or $pagina < 1 or file_exists("galeria/" . 1 + (4*($pagina-1)) . ".jpg") == false){
-            include("invalido.html");
+            header("Location: error.php?id=2");
             exit();
         }
     }
     else if (file_exists("galeria/" . 1 + (4*($pagina-1)) . ".jpg") == false){
-        include("nocontent.html");
+        header("Location: error.php?id=1");
         exit();
     }
 ?>
@@ -29,7 +29,7 @@
             <li><a href="subir.html">Subir</a></li>
         </ul>
         <div class="nav-cuenta">
-            <a href="cuenta.php" id="cuenta">Invitado</a>
+            <a href="php/cuenta.php" id="cuenta">Invitado</a>
         </div>
     </nav>
     <header>
