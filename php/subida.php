@@ -40,7 +40,7 @@
             $imagen = imagecreatefromjpeg($archivo["tmp_name"]);
         }
         if (!$imagen){
-            $mensaje = "La imagen está corrupta o no es válida";
+            header("Location: error.php?id=3");
         }
         else{
             $miniatura_w = 400;
@@ -74,9 +74,7 @@
                             $width, $height);
             imagejpeg($miniatura, $dir . $renombrado , 80);
             $mensaje = "Imagen subida con éxito";
-            $fullsizeimg = imagejpeg($imagen, $renombrado);
-
-            rename($renombrado, $fullsize . $renombrado);
+            $fullsizeimg = imagejpeg($imagen, $fullsize . $renombrado);
         }
     }
     else{
@@ -106,7 +104,7 @@
             <li><a href="../subir.html">Subir</a></li>
         </ul>
         <div class="nav-cuenta">
-            <a href="cuenta.php" id="cuenta">Invitado</a>
+            <a href="php/cuenta.php" id="cuenta">Invitado</a>
         </div>
     </nav>
     <header>
