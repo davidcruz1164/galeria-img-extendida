@@ -26,7 +26,7 @@
         <h1>test</h1>
         <ul>
             <li><a href="#">Galería</a></li>
-            <li><a href="subir.html">Subir</a></li>
+            <li><a href="subir.php">Subir</a></li>
         </ul>
         <div class="nav-cuenta">
             <a href="php/cuenta.php" id="cuenta">Invitado</a>
