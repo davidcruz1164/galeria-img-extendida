@@ -1,3 +1,7 @@
+<?php
+    // TODO: Hacer sistema de tags
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,8 +55,15 @@
                                 <p>Título</p>
                                 <input type="text" name="titulo" id="titulo-input" required>
                             </div> 
+                        </div>
+                        <div class="contenido-subir-formulario-fila1">
                             <div class="contenido-subir-formulario-fila1-input">
                                 <p>Tags</p>
+                                <div class="contenido-subir-formulario-fila1-input-tags">
+                                    <span id="input-tag">asd</span>
+                                    <span id="input-tag">asd</span>
+                                    <span id="input-tag">asd</span>
+                                </div>
                             </div>
                         </div>
                         <input type="submit" value="Subir" id="btn-enviar" disabled>
