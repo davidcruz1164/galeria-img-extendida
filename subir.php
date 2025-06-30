@@ -1,5 +1,6 @@
 <?php
     // TODO: Hacer sistema de tags
+    // Mejor visualización de tags (usar columnas xd)
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +11,7 @@
     <title>Subir</title>
     <link rel="stylesheet" href="styles/styles.css">
     <script src="js/archivos.js" defer></script>
+    <script src="js/tags.js" defer></script>
 </head>
 <body>
     <nav>
@@ -59,11 +61,12 @@
                         <div class="contenido-subir-formulario-fila1">
                             <div class="contenido-subir-formulario-fila1-input">
                                 <p>Tags</p>
-                                <div class="contenido-subir-formulario-fila1-input-tags">
-                                    <span id="input-tag">asd</span>
-                                    <span id="input-tag">asd</span>
-                                    <span id="input-tag">asd</span>
+                                <div class="contenido-subir-formulario-fila1-input-tags" id="insert-tags">
                                 </div>
+                            </div>
+                            <div class="contenido-subir-formulario-fila1-input">
+                                <p>Insertar tags</p>
+                                <input type="text" name="titulo" id="tags-input">
                             </div>
                         </div>
                         <input type="submit" value="Subir" id="btn-enviar" disabled>
