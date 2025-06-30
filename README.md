@@ -3,7 +3,10 @@
 ## Descripción
 Este repositorio es una versión extendida del siguiente proyecto: [Galería de Imágenes](https://github.com/hddtomas/galeria-img)
 
-Esta versión presenta la posibilidad de subir más de cuatro imágenes y aparte se puede ver la imagen de forma completa.
+Esta versión presenta un uso más extenso de parte del servidor (backend) y un sistema mucho más completo usando base de datos.
+
+## Requisitos para ejecutar
+- ```GD``` debe estar habilitado.
 
 ## Contenidos
 - Sección de imágenes
