@@ -30,5 +30,5 @@ Esta versión presenta un uso más extenso de parte del servidor (backend) y un 
 - HTML5
 - CSS3
 - PHP
-
+- JavaScript
 
