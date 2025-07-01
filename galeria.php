@@ -1,13 +1,18 @@
 <?php
-    error_reporting(E_ERROR | E_PARSE);
+    // TODO: Sistema de busqueda ?
+
+    if (!isset($_GET['pag'])){
+        header("Location: error.php?id=2");
+        exit();
+    }
     $pagina = $_GET['pag'];
     if ($pagina != 1){
-        if ($pagina == null or is_numeric($pagina) == false or $pagina < 1 or file_exists("galeria/" . 1 + (4*($pagina-1)) . ".jpg") == false){
+        if (is_numeric($pagina) == false or $pagina < 1 or file_exists("galeria/" . 1 + (12*($pagina-1)) . ".jpg") == false){
             header("Location: error.php?id=2");
             exit();
         }
     }
-    else if (file_exists("galeria/" . 1 + (4*($pagina-1)) . ".jpg") == false){
+    else if (file_exists("galeria/" . 1 + (12*($pagina-1)) . ".jpg") == false){
         header("Location: error.php?id=1");
         exit();
     }
@@ -18,91 +23,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería</title>
+    <title>Subir</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/archivos.js" defer></script>
+    <script src="js/tags.js" defer></script>
 </head>
-<body>
+<body class="galerias">
     <nav>
         <h1>test</h1>
         <ul>
-            <li><a href="#">Galería</a></li>
+            <li><a href="galeria.php?pag=1">Galería</a></li>
             <li><a href="subir.php">Subir</a></li>
         </ul>
         <div class="nav-cuenta">
             <a href="php/cuenta.php" id="cuenta">Invitado</a>
         </div>
     </nav>
-    <header>
-        <?php
-            echo "<h1>Página " . $pagina . "</h1>";
-        ?>
-        <div class="contenido">
-            <div class="contenido-grupo">
-                <div class="contenido-bloque">
-                    <?php
-                        if ($pagina == 1){
-                            echo "<a href='post.php?id=" . 1 . "'><img src='galeria/" . 1 . ".jpg' alt=''></a>";
-                            echo "<p>Post #" . 1 . "</p>";
-                        }
-                        else if (file_exists("galeria/" . 1 + (4*($pagina-1)) . ".jpg")){
-                            echo "<a href='post.php?id=" . 1 + (4*($pagina-1)) . "'><img src='galeria/" . 1 + (4*($pagina-1)) . ".jpg' alt=''></a>";
-                            echo "<p>Post #" . 1 + (4*($pagina-1)) . "</p>";
-                        }
-                    ?>
-                </div>
+    <div class="galeria">
+        <div class="galeria-panel">
+
+        </div>
+        <div class="galeria-panel2">
+            <div class="galeria-imagenes">
                 <?php
-                    if ($pagina == 1){
-                        if (file_exists("galeria/" . 2 + (4*($pagina-1)) . ".jpg")){
+                    for ($i = 0; $i < 12; $i++){
+                        $id = 1 + (12*($pagina-1)) + $i;
+                        if (file_exists("galeria/" . $id . ".jpg")){
                             echo "<div class='contenido-bloque'>";
-                            echo "<a href='post.php?id=" . 2 . "'><img src='galeria/" . 2 . ".jpg' alt=''></a>";
-                            echo "<p>Post #" . 2 . "</p>";
+                            echo "<a href='post.php?id=" . $id . "'><img src='galeria/" . $id . ".jpg' alt=''></a>";
+                            echo "<p>Post #" . $id . "</p>";
                             echo "</div>";
                         }
-                    }
-                    else if (file_exists("galeria/" . 2 + (4*($pagina-1)) . ".jpg")){
-                        echo "<div class='contenido-bloque'>";
-                        echo "<a href='post.php?id=" . 2 + (4*($pagina-1)) . "'><img src='galeria/" . 2 + (4*($pagina-1)) . ".jpg' alt=''></a>";
-                        echo "<p>Post #" . 2 + (4*($pagina-1)) . "</p>";
-                        echo "</div>";
                     }
                 ?>
             </div>
-            <div class="contenido-grupo">
-                <?php
-                    if ($pagina == 1){
-                        if (file_exists("galeria/" . 3 + (4*($pagina-1)) . ".jpg")){
-                            echo "<div class='contenido-bloque'>";
-                            echo "<a href='post.php?id=" . 3 . "'><img src='galeria/" . 3 . ".jpg' alt=''></a>";
-                            echo "<p>Post #" . 3 . "</p>";
-                            echo "</div>";
-                        }
-                    }
-                    else if (file_exists("galeria/" . 3 + (4*($pagina-1)) . ".jpg")){
-                        echo "<div class='contenido-bloque'>";
-                        echo "<a href='post.php?id=" . 3 + (4*($pagina-1)) . "'><img src='galeria/" . 3 + (4*($pagina-1)) . ".jpg' alt=''></a>";
-                        echo "<p>Post #" . 3 + (4*($pagina-1)) . "</p>";
-                        echo "</div>";
-                    }
-                ?>
-                <?php
-                    if ($pagina == 1){
-                        if (file_exists("galeria/" . 4 + (4*($pagina-1)) . ".jpg")){
-                            echo "<div class='contenido-bloque'>";
-                            echo "<a href='post.php?id=" . 4 . "'><img src='galeria/" . 4 . ".jpg' alt=''></a>";
-                            echo "<p>Post #" . 4 . "</p>";
-                            echo "</div>";
-                        }
-                    }
-                    else if (file_exists("galeria/" . 4 + (4*($pagina-1)) . ".jpg")){
-                        echo "<div class='contenido-bloque'>";
-                        echo "<a href='post.php?id=" . 4 + (4*($pagina-1)) . "'><img src='galeria/" . 4 + (4*($pagina-1)) . ".jpg' alt=''></a>";
-                        echo "<p>Post #" . 4 + (4*($pagina-1)) . "</p>";
-                        echo "</div>";
-                    }
-                ?>
-            </div>
-            <div class="contenido-botones">
-                <div class="contenido-botones-izquierda">
+            <div class="galeria-botones">
+                <div class="galeria-botones-izquierda">
                     <?php
                         if ($pagina > 1){
                             echo "<a class='boton' href='galeria.php?pag=" . $pagina-1 . "'>Anterior Pág.</a>";
@@ -112,9 +68,9 @@
                         }
                     ?>
                 </div>
-                <div class="contenido-botones-derecha">
+                <div class="galeria-botones-derecha">
                     <?php
-                        if (file_exists("galeria/" . 1 + (4*($pagina)) . ".jpg")){
+                        if (file_exists("galeria/" . 1 + (12*($pagina)) . ".jpg")){
                             echo "<a class='boton' href='galeria.php?pag=" . $pagina+1 . "'>Siguiente Pág.</a>";      
                         }
                         else{
@@ -124,6 +80,6 @@
                 </div>
             </div>
         </div>
-    </header>
+    </div>
 </body>
 </html>
