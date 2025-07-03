@@ -482,9 +482,35 @@ Queda muy raro que no estén juntos, pero bueno */
     display: block;
     width: 30%;
     height: 100%;
-    background-color: rgb(20, 20, 19);
     color: rgb(211, 199, 199);
     padding: 1em;
+    padding-top: 0;
+}
+
+.galeria-herramientas{
+    display: block;
+    background-color: rgb(20, 20, 19);
+    min-height: 400px;
+}
+
+.galeria-herramientas h2{
+    text-align: center;
+    padding: 0.3em;
+}
+
+.galeria-herramientas input{
+    display: block;
+    box-sizing: border-box;
+    width: 80%;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 0;
+    border-radius: 8px;
+    background-color: rgb(51, 51, 49);
+    color: white;
 }
 
 .galeria-panel2{
