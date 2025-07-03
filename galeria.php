@@ -41,7 +41,10 @@
     </nav>
     <div class="galeria">
         <div class="galeria-panel">
-
+            <div class="galeria-herramientas">
+                <h2>Busqueda</h2>
+                <input type="text">
+            </div>
         </div>
         <div class="galeria-panel2">
             <div class="galeria-imagenes">
