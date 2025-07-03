@@ -27,7 +27,9 @@
     $info = pathinfo($archivo["name"]);
 
     $nombregenerado = strval(rand(0, 100000000000)) . ".jpg";
-
+    if (!isset($archivo)){
+        header("Location: ../error.php?id=3");
+    }
     // chequeos de sanidad
     list($x, $y) = getimagesize($archivo["tmp_name"]);
     $tamaño = filesize($archivo["tmp_name"]);
@@ -40,7 +42,7 @@
             $imagen = imagecreatefromjpeg($archivo["tmp_name"]);
         }
         if (!$imagen){
-            header("Location: error.php?id=3");
+            header("Location: ../error.php?id=3");
         }
         else{
             $miniatura_w = 400;
