@@ -441,19 +441,28 @@ Queda muy raro que no estén juntos, pero bueno */
 .contenido-subir-formulario-fila1-input-tags{
     display: flex;
     background-color: rgb(20, 20, 19);
-    height: 40px;
+    min-height: 40px;
     gap: 0.5em;
-    min-width: 250px;
+    width: 250px;
+    max-height: 80px;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
+    flex-wrap: wrap;
+    padding: 0.5em;
 }
 
 #input-tag{
-    background-color: red;
-    width: 60px;
-    text-align: center;
+    background-color: rgb(49, 168, 79);
+    border-radius: 8px;
+    height: 25px;
     color: white;
+    text-align: center;
+    padding: 0 10px; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; 
 }
 
 #error, #disculpas{
@@ -480,7 +489,7 @@ Queda muy raro que no estén juntos, pero bueno */
 
 .galeria-panel{
     display: block;
-    width: 30%;
+    width: 20%;
     height: 100%;
     color: rgb(211, 199, 199);
     padding: 1em;
@@ -490,6 +499,7 @@ Queda muy raro que no estén juntos, pero bueno */
 .galeria-herramientas{
     display: block;
     background-color: rgb(20, 20, 19);
+    border-radius: 8px;
     min-height: 400px;
 }
 
@@ -498,11 +508,16 @@ Queda muy raro que no estén juntos, pero bueno */
     padding: 0.3em;
 }
 
+.galeria-herramientas h4{
+    margin-left: 0.5em;
+    margin-top: 1.2em;
+}
+
 .galeria-herramientas input{
     display: block;
     box-sizing: border-box;
-    width: 80%;
-    height: 30px;
+    width: 90%;
+    height: 40px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
@@ -511,6 +526,15 @@ Queda muy raro que no estén juntos, pero bueno */
     border-radius: 8px;
     background-color: rgb(51, 51, 49);
     color: white;
+    padding: 1em;
+}
+
+.galeria-tags-populares{
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
 }
 
 .galeria-panel2{
@@ -524,12 +548,12 @@ Queda muy raro que no estén juntos, pero bueno */
 
 .galeria-imagenes{
     margin: 0;
-    margin-left: 2em;
+    margin-left: 0em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 1em;
     grid-gap: 1.5em;
-    width: 90%;
+    width: 98%;
     height: 100%;
 }
 
