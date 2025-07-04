@@ -1,4 +1,4 @@
-let caracteres_permitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_";
+let caracteres_permitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_ ";
 let tag_permitido = true;
 let tags_introducidos = 0;
 
@@ -7,7 +7,7 @@ let tags_input = document.getElementById("tags-input");
 
 function introducirTag(tag){
     tag_permitido = true;
-    if ((tag.length < 15) && (tags_introducidos < 4)){
+    if ((tag.length <= 20) && (tags_introducidos < 4)){
         for (let i = 0; i < tag.length; i++) {
             if (caracteres_permitidos.includes(tag[i]) == false) {
                 tag_permitido = false;
