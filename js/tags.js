@@ -5,6 +5,8 @@ let tags_introducidos = 0;
 let insert_tags = document.getElementById("insert-tags");
 let tags_input = document.getElementById("tags-input");
 
+let formulario = document.getElementById("formulario-subir");
+
 function introducirTag(tag){
     tag_permitido = true;
     if ((tag.length <= 20) && (tags_introducidos < 4) && (tag != "") && (/\S/.test(tag) && (tag != null))){
@@ -35,5 +37,11 @@ tags_input.addEventListener('keyup', function (e) {
     if (e.key === 'Enter') {
         introducirTag(tags_input.value.toLowerCase());
         tags_input.value = "";
+    }
+});
+
+formulario.addEventListener("submit", function (e) {
+    if (!tags_introducidos > 0){
+        e.preventDefault();
     }
 });
