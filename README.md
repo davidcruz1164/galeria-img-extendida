@@ -5,7 +5,7 @@ Este repositorio es una versión extendida del siguiente proyecto: [Galería de 
 
 Esta versión presenta un uso más extenso de parte del servidor (backend) y un sistema mucho más completo usando base de datos.
 
-## Requisitos para ejecutar
+## Requisitos para hostear
 - ```GD``` debe estar habilitado.
 
 ## Contenidos
