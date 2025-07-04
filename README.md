@@ -2,6 +2,7 @@
 
 ## Descripción
 Tablón de imágenes con autenticación (no anonimo) donde los usuarios pueden subir imágenes junto a un título, tags y una descripción breve.
+
 Los usuarios pueden ver los posteos a través de la página de inicio.
 
 Este repositorio es una versión extendida del siguiente proyecto: [Galería de Imágenes](https://github.com/hddtomas/galeria-img)
