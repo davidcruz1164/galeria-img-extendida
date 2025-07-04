@@ -53,7 +53,7 @@
             <div class="contenido-subir-divisores">
                 <h1>Datos</h1>
                 <div class="contenido-subir-formulario">
-                    <form action="php/subida.php" method="POST" enctype="multipart/form-data" id="formulario_subir" onkeydown="if (event.keyCode === 13) {return false;}">
+                    <form action="php/subida.php" method="POST" enctype="multipart/form-data" id="formulario-subir" onkeydown="if (event.keyCode === 13) {return false;}">
                         <input type="file" accept=".png, .jpg, .jpeg" name="archivo" id="archivo-file" required>
                         <div class="contenido-subir-formulario-fila1">
                             <div class="contenido-subir-formulario-fila1-input">
