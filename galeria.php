@@ -1,11 +1,13 @@
 <?php
     // TODO: Sistema de busqueda ?
-
-    if (!isset($_GET['pag'])){
-        header("Location: error.php?id=2");
-        exit();
+    if (!isset($_GET["pag"])){
+        $pagina = 1;
     }
-    $pagina = $_GET['pag'];
+    else{
+        $pagina = $_GET['pag'];
+    }
+
+
     if ($pagina != 1){
         if (is_numeric($pagina) == false or $pagina < 1 or file_exists("galeria/" . 1 + (12*($pagina-1)) . ".jpg") == false){
             header("Location: error.php?id=2");
