@@ -29,8 +29,8 @@ Esta versión presenta un uso más extenso del servidor (backend) y un sistema m
 - Página responsive
 
 ## Lenguajes de programación usados
-- HTML5
-- CSS3
-- PHP
-- JavaScript
+- ```HTML5```
+- ```CSS3```
+- ```PHP```
+- ```JavaScript```
 
