@@ -44,6 +44,16 @@
             <div class="galeria-herramientas">
                 <h2>Busqueda</h2>
                 <input type="text">
+                <h4>Tags populares</h4>
+                <div class="galeria-tags-populares">
+                    <span id="input-tag">csgo</span>
+                    <span id="input-tag">counter strike</span>
+                    <span id="input-tag">dark souls</span>
+                    <span id="input-tag">left 4 dead 2</span>
+                    <span id="input-tag">bocchi the rock</span>
+                    <span id="input-tag">walfwalsgág´pñap´gapgwáwp´g</span>
+                    <span id="input-tag">counter strike 2</span>
+                </div>
             </div>
         </div>
         <div class="galeria-panel2">
