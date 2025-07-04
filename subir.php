@@ -1,6 +1,9 @@
 <?php
     // TODO: Hacer sistema de tags
-    // Mejor visualización de tags (usar columnas xd)
+    // Mejores textboxs
+    // Mejor boton de subir (no se pone bien)
+    // Evitar que el enter suba el formulario kkk
+    // Mejor diseño, sinceramente no me gusta xd
 ?>
 
 <!DOCTYPE html>
