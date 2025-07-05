@@ -1,12 +1,12 @@
 <?php
     // TODO: Sistema de busqueda ?
+    // Sistema de indexado (Yo creo que estaría feo mostrar las imágenes borradas como inaccesibles)
     if (!isset($_GET["pag"])){
         $pagina = 1;
     }
     else{
         $pagina = $_GET['pag'];
     }
-
 
     if ($pagina != 1){
         if (is_numeric($pagina) == false or $pagina < 1 or file_exists("galeria/" . 1 + (12*($pagina-1)) . ".jpg") == false){
@@ -61,12 +61,26 @@
         <div class="galeria-panel2">
             <div class="galeria-imagenes">
                 <?php
+                    $imagenes = scandir("galeria/");
+                    if (file_exists("galeria/Test.txt")){
+                        $end_id = count($imagenes) - 3;
+                    }
+                    else{
+                        $end_id = count($imagenes) - 2;
+                    }
+
                     for ($i = 0; $i < 12; $i++){
                         $id = 1 + (12*($pagina-1)) + $i;
                         if (file_exists("galeria/" . $id . ".jpg")){
                             echo "<div class='contenido-bloque'>";
                             echo "<a href='post.php?id=" . $id . "'><img src='galeria/" . $id . ".jpg' alt=''></a>";
                             echo "<p>Post #" . $id . "</p>";
+                            echo "</div>";
+                        }
+                        else if ($id <= $end_id){
+                            echo "<div class='contenido-bloque'>";
+                            echo "<a href='error.php?id=4'><img src='resources/notfound.jpg' alt=''></a>";
+                            echo "<p>Post #" . $id . " (Eliminado)</p>";
                             echo "</div>";
                         }
                     }
