@@ -588,6 +588,10 @@ Queda muy raro que no estén juntos, pero bueno */
     transition: all 200ms;
 }
 
+.contenido-bloque-phantom{
+    opacity: 0.4;
+}
+
 .contenido-bloque img{
     width: 100%;
     height: 100%;
@@ -596,6 +600,7 @@ Queda muy raro que no estén juntos, pero bueno */
 
 .contenido-bloque:hover{
     transform: scale(1.1);
+    opacity: 1;
     box-shadow: 5px 1px 40px rgb(65, 64, 64);
 }
 
