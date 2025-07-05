@@ -2,7 +2,8 @@
     $errores = [
         "No hay contenido en esta página.",
         "No se ha encontrado el contenido solicitado.",
-        "La imagen está corrupta o no es válida."
+        "La imagen está corrupta o no es válida.",
+        "No se ha encontrado el contenido solicitado porque fue eliminado."
     ];
 ?>
 
