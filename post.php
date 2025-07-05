@@ -1,11 +1,16 @@
 <?php
-    $id = $_GET["id"];
-    if (!file_exists("galeria/fullsize/" . $id . ".jpg")){
+    if (isset($_GET["id"]) && is_numeric($_GET["id"])){
+        $id = $_GET["id"];
+        if (!file_exists("galeria/fullsize/" . $id . ".jpg")){
+            header("Location: error.php?id=2");
+            exit();
+        }
+    }
+    else{
         header("Location: error.php?id=2");
-        exit();
     }
 
-    //todo: tags
+    //todo: mejores tags - caja de comentarios - like y dislikes - mejor preview (?)
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +36,6 @@
         <div class="contenido-post">
             <?php
                 echo "<img src='galeria/fullsize/" . $id . ".jpg'>";
-                // todo: like y dislike
                 echo "<div class='post-contenido'>";
                 echo "<div class='post-contenido-titulo'>";
                 echo "<h1 id='post-titulo'>Título</h1>";
