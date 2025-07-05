@@ -1,6 +1,7 @@
 <?php
     // TODO: Sistema de busqueda ?
     // Sistema de indexado (Yo creo que estaría feo mostrar las imágenes borradas como inaccesibles)
+    // Arreglar lo de que si el ID 1 no existe, colapsa todo el sistema xd
     if (!isset($_GET["pag"])){
         $pagina = 1;
     }
@@ -78,7 +79,7 @@
                             echo "</div>";
                         }
                         else if ($id <= $end_id){
-                            echo "<div class='contenido-bloque'>";
+                            echo "<div class='contenido-bloque contenido-bloque-phantom'>";
                             echo "<a href='error.php?id=4'><img src='resources/notfound.jpg' alt=''></a>";
                             echo "<p>Post #" . $id . " (Eliminado)</p>";
                             echo "</div>";
