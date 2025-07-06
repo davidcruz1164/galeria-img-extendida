@@ -1,7 +1,7 @@
 # Galería de Imágenes Extendida
 
 ## Descripción
-Tablón de imágenes con autenticación (no anonimo) donde los usuarios pueden subir imágenes junto a un título, tags y una descripción breve.
+Tablón de imágenes con autenticación (no anónimo) donde los usuarios pueden subir imágenes junto a un título, tags y una descripción breve.
 
 Los usuarios pueden ver los posteos a través de la página de inicio.
 
