@@ -3,9 +3,12 @@ let image = document.getElementById("image-preview");
 let requisito1 = document.getElementById("requisito1");
 let requisito2 = document.getElementById("requisito2");
 let requisito3 = document.getElementById("requisito3");
-let req1 = false, req2 = false, req3 = false;
 
+let textbox = document.getElementById("titulo-input");
 let enviar = document.getElementById("btn-enviar");
+
+export let req1 = false, req2 = false, req3 = false;
+import {tags_introducidos} from "./tags.js";
 
 archivo.addEventListener("change", (event) => {
     const imagen = event.target.files[0];
@@ -23,7 +26,8 @@ archivo.addEventListener("change", (event) => {
             requisito1.style.backgroundColor = "rgb(221, 74, 98)";
             req1 = false;
         }
-        if (req1 && req2 && req3) {
+
+        if (req1 && req2 && req3 && tags_introducidos > 0 && textbox.value.trim() != "") {
             enviar.disabled = false;
         } else {
             enviar.disabled = true;
@@ -45,5 +49,14 @@ archivo.addEventListener("change", (event) => {
     else{
         requisito3.style.backgroundColor = "rgb(221, 74, 98)";
         req3 = false;
+    }
+});
+
+textbox.addEventListener("input", (e) => {
+    if (req1 && req2 && req3 && tags_introducidos > 0 && e.target.value.trim() != ""){
+        enviar.disabled = false;
+    }
+    else{
+        enviar.disabled = true;
     }
 });
