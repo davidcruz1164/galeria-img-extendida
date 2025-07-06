@@ -1,9 +1,13 @@
 let caracteres_permitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_ ";
 let tag_permitido = true;
-let tags_introducidos = 0;
+
+export let tags_introducidos = 0;
+import {req1, req2, req3} from "./archivos.js";
 
 let insert_tags = document.getElementById("insert-tags");
 let tags_input = document.getElementById("tags-input");
+let titulo_input = document.getElementById("titulo-input")
+let enviar = document.getElementById("btn-enviar");
 
 let formulario = document.getElementById("formulario-subir");
 
@@ -23,6 +27,12 @@ function introducirTag(tag){
             span.id = "input-tag";
             span.innerText = tag;
             insert_tags.appendChild(span);
+            if (req1 && req2 && req3 && titulo_input.value.trim() != ""){
+                enviar.disabled = false;
+            }
+            else{
+                enviar.disabled = true;
+            }
         }
         else{
             console.log("Tag no permitido");
