@@ -3,7 +3,8 @@
         "No hay contenido en esta página.",
         "No se ha encontrado el contenido solicitado.",
         "La imagen está corrupta o no es válida.",
-        "No se ha encontrado el contenido solicitado porque fue eliminado."
+        "No se ha encontrado el contenido solicitado porque fue eliminado por el usuario.",
+        "No se ha encontrado el contenido solicitado porque fue moderado."
     ];
 ?>
 
@@ -28,7 +29,7 @@
         </div>
     </nav>
     <header>
-        <h1>Ups, hubo un problema</h1>
+        <h1>Ups, hubo un problema...</h1>
         <?php
             if ((isset($_GET["id"])) && (is_numeric($_GET["id"]) && ($_GET["id"] > 0) && ($_GET["id"] < (count($errores) + 1)))) {
                 echo "<p id='error'>" . $errores[$_GET["id"] - 1] . "</p>";
