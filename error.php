@@ -35,7 +35,7 @@
                 echo "<p id='error'>" . $errores[$_GET["id"] - 1] . "</p>";
             }
         ?>
-        <p id="disculpas">Pedimos disculpas.</p>
+        <p id="disculpas"><b>Pedimos disculpas.</b></p>
     </header>
 </body>
 </html>
