@@ -320,6 +320,7 @@ header h1{
 #post-comentarios-comentario-avatar{
     display: block;
     width: 40px;
+    max-height: 40px;
     margin: 0;
     background-color: gray;
 }
