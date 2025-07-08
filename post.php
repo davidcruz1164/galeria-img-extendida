@@ -11,6 +11,7 @@
     }
 
     //todo: mejores tags - caja de comentarios - like y dislikes - mejor preview (?)
+    // evitar que se estire el avatar XD
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +55,21 @@
                 echo "<p id='post-descripcion'>Descripción. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aspernatur alias harum velit laborum perspiciatis quisquam autem voluptatum ducimus deleniti. Placeat fugiat veniam provident, blanditiis quos voluptatum aliquam cupiditate ullam.</p>";
                 echo "</div>";
             ?>
-            <h1 id="post-comentarios-titulo">Comentarios</h1>
+            <h2 id="post-comentarios-titulo">Comentarios</h1>
+            <div class="post-comentarios">
+                <div class="post-comentarios-comentario">
+                    <img src="resources/avatar.png" alt="" id="post-comentarios-comentario-avatar">
+                    <p><b>User</b><br>Hola</p>
+                </div>
+                <div class="post-comentarios-comentario">
+                    <img src="resources/avatar.png" alt="" id="post-comentarios-comentario-avatar">
+                    <p><b>User</b><br>Testeo</p>
+                </div>
+                <div class="post-comentarios-comentario">
+                    <img src="resources/avatar.png" alt="" id="post-comentarios-comentario-avatar">
+                    <p><b>User</b><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae accusamus quidem voluptatum eius. In sunt numquam sequi error vel fugit, consequatur, nesciunt temporibus commodi corporis reiciendis, excepturi sapiente. Facere, debitis.</p>
+                </div>
+            </div>
             <form action="" method="post">
                 <textarea name="" id="post-comentarios-textarea" rows="2" required></textarea>
             </form>
