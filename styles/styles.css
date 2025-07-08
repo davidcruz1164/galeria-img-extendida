@@ -461,7 +461,7 @@ header h1{
 .contenido-subir-formulario-fila1{
     display: flex;
     margin-top: 1em;
-    gap: 5em;
+    gap: 2.5em;
 }
 
 .contenido-subir-formulario-fila1-input{
