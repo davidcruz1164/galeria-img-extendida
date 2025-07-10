@@ -70,9 +70,14 @@
                     <p><b>User</b><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae accusamus quidem voluptatum eius. In sunt numquam sequi error vel fugit, consequatur, nesciunt temporibus commodi corporis reiciendis, excepturi sapiente. Facere, debitis.</p>
                 </div>
             </div>
-            <form action="" method="post">
-                <textarea name="" id="post-comentarios-textarea" rows="2" required></textarea>
-            </form>
+            <h2 id="post-comentarios-comentar">Comentar</h2>
+            <div class="post-comentarios-comentar">
+                <img src="resources/avatar.png" alt="" id="post-comentarios-comentario-avatar">
+                <form action="" method="post">
+                    <textarea name="" id="post-comentarios-textarea" rows="2" required></textarea>
+                    <input type="submit" value="Comentar" id="post-comentarios-enviar">
+                </form>
+            </div>
             </div>
         </div>
     </header>
