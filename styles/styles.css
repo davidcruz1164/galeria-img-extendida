@@ -388,6 +388,11 @@ header h1{
     transform: scale(1.05);
 }
 
+#post-comentarios-enviar:disabled{
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
 #post-comentarios-textarea:focus{
     outline: none !important;
     border: 2px solid #464949;
